@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CodecExerciser</string>
+    <string name="preparing_content">Preparing content</string>
+    <string name="workJobName_text">Working&#8230;</string>
+
+    <!-- Play movie activity -->
+    <string name="title_activity_play_movie">Play video (TextureView)</string>
+    <string name="play_button_text">Play</string>
+    <string name="stop_button_text">Stop</string>
+    <string name="locked60fps_checkbox">Play at 60fps</string>
+    <string name="loopPlayback_checkbox">Loop playback</string>
+
+    <!-- ExoPlayer simulation test case-->
+    <string name="title_exoplayer_simulation_test">ExoPlayer simulation Test</string>
+
+    <!-- ExoPlayer codec reuse test case -->
+    <string name="title_exoplayer_test">ExoPlayer Test</string>
+
+    <!-- Content manager -->
+    <string name="contentGenerationFailedTitle">Unable to generate content</string>
+    <string name="contentGenerationFailedMsg">Failed to generate content.  Some
+         features may be unavailable.\n\n%1$s</string>
+    <string name="ok">OK</string>
+
+    <!-- Play video SurfaceView -->
+    <string name="title_activity_play_movie_surface">Surface Shuffling Test</string>
+    <string name="shuffle_surface">Shuffle surface</string>
+    <string name="set_source">Set source</string>
+
+    <string name="remove_surface_button_text">Remove Surface</string>
+    <string name="add_surface_button_text">Add Surface</string>
+</resources>
