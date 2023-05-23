@@ -524,7 +524,7 @@ class MoviePlayer(
             val numTracks = extractor.trackCount
             for (i in 0 until numTracks) {
                 val format = extractor.getTrackFormat(i)
-                val mime = format.getString(MediaFormat.KEY_MIME)
+                val mime = format.getString(MediaFormat.KEY_MIME)!!
                 if (mime.startsWith("video/")) {
                     if (VERBOSE) {
                         Log.d(

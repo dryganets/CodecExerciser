@@ -35,7 +35,7 @@ class DefaultCodecSupplier : MediaCodecSupplier {
             TAG,
             "MediaCodec DefaultCodecSupplier acquireCodec"
         ) {
-            val mime = format.getString(MediaFormat.KEY_MIME);
+            val mime = format.getString(MediaFormat.KEY_MIME)!!;
             result = MediaCodec.createDecoderByType(mime)
             result.configure(format, surface, null, 0)
             result.start()
@@ -68,7 +68,7 @@ class DummySurfaceCodecSupplier(context: Context) :
         // Create a MediaCodec decoder, and configure it with the MediaFormat from the
         // extractor.  It's very important to use the format from the extractor because
         // it contains a copy of the CSD-0/CSD-1 codec-specific data chunks.
-        val mime = format.getString(MediaFormat.KEY_MIME);
+        val mime = format.getString(MediaFormat.KEY_MIME)!!;
         val result = MediaCodec.createDecoderByType(mime)
         result.configure(format, dummySurface, null, 0)
         result.start()
@@ -105,7 +105,7 @@ class SingleReuseCodecSupplier(
     override fun acquireCodec(format: MediaFormat, exoFormat: Format?, surface: Surface): MediaCodec {
         val localHolder = codecHolder;
 
-        val mime = format.getString(MediaFormat.KEY_MIME);
+        val mime = format.getString(MediaFormat.KEY_MIME)!!;
         lateinit var result: MediaCodec
         time(
             TAG,

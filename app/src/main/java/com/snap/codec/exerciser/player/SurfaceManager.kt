@@ -39,20 +39,20 @@ class SurfaceManager(
     }
 
     private val surfaceListener = object : SurfaceHolder.Callback {
-        override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+        override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
             if (holder == currentHolder) {
                 delegateListener.surfaceChanged(holder, format, width, height)
             }
         }
 
-        override fun surfaceDestroyed(holder: SurfaceHolder?) {
+        override fun surfaceDestroyed(holder: SurfaceHolder) {
             holdersInfo[holder]?.ready = false
             if (holder == currentHolder) {
                 delegateListener.surfaceDestroyed(holder)
             }
         }
 
-        override fun surfaceCreated(holder: SurfaceHolder?) {
+        override fun surfaceCreated(holder: SurfaceHolder) {
             holdersInfo[holder]?.ready = true
             if (holder == currentHolder) {
                 delegateListener.surfaceCreated(holder)
